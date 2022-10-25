@@ -7,21 +7,17 @@ import { LoginService } from 'src/app/Auth/login.service';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  user= {
-    nombre: "",
+  user={
+    usuario :"",
     pass: ""
   }
+
   constructor(private acceso: LoginService) { }
 
   ngOnInit(): void {
   }
-
-
 validar(){
-  if (this.user.nombre!= ""){
-    //this.acceso.Login (this.user).subscribe((res:any)=>{
-    //  console.Log(res);
-    //});
+  if (this.user.usuario !=""){
     console.log(this.acceso.login(this.user));
   }
 }

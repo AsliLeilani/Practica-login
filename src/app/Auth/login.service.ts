@@ -5,11 +5,11 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class LoginService {
-  private URL : string = 'https://localhost:8000';
+
   constructor(private servHTTP: HttpClient){
+
    }
-  public login (user:any){
-    //return this.servHTTP.post('${this.URL}/insize/login', user);
+  public login(user:any){
     return "ya estoy aquí";
   }
 }
